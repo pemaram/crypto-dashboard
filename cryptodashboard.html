@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto-Currency DashBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./cryptodashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.1/dist/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+    <script src="./charts/chartjs-financial-chat.js" type="text/javascript"></script>
+    <script src="./charts/doughnut.js" defer></script>
+    <script src="./charts/chart2.js" defer></script>
+    <script src="./charts/chart3.js" defer></script>
+    <script src="./charts/chart4.js" defer></script>
+    <script src="./charts/chart5.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="side-navbar">
+            <div class="icon">
+                <p class="ico"><i class="fa-solid fa-table-columns"></i></p>
+                <p class="ico"><i class="fa-solid fa-suitcase"></i></p>
+                <p class="ico"><i class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                <p class="ico"><i class="fa-solid fa-note-sticky"></i></p>
+            </div>
+        </div>
+
+        <div class="main-dash">
+
+                <!-- COMPONENT 1 -->
+                <div class="sec1">
+                    <p class="ele1">Exchange Not Connected <span class="icon1"><i class="fa-solid fa-circle-exclamation"></i></span></p>
+                    <div class="sec11">
+                        <button class="btn1">Renew Subscription</button>
+                        <p class="ele2">Trial Subscription - 7 more days left</p>
+                    </div>
+                </div>
+
+                <!-- COMPONENT 2 -->
+                <div class="sec2">
+                    <div class="sec21">
+                        <div class="secc2">
+                            <p class="ele11">Balance<span class="icon1"><i class="fa-solid fa-wallet"></i></span></p>
+                            <p class="ele12">2.043454 BTC</p>
+                        </div>
+                        <p class="ele13">&#xFE69;25,200.97</p>
+                            <div class="secc3">
+                                <ul>
+                                    <li class="list">&#8595;Invested</li>
+                                    <li class="value">&#36;10,458.00</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">&#8593;% Profit</li>
+                                    <li class="value">+ 60%</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">&#8593;USD Profit</li>
+                                    <li class="value">&#36;15,648.38</li>
+                                </ul>
+                            </div>
+                            <button class="btn2">Add Exchange</button>
+                    </div>
+                    <div class="sec22">
+                        <p class="ele21">&#36;25,200.97</p>
+                        <div class="secc4">
+                            <div class="chart1">
+                                <canvas id="myChart1"></canvas>
+                            </div>
+                            <div class="secc5">
+                                <div class="ele22">
+                                <ul>
+                                    <li class="list1">Bitcoin</li>
+                                    <li class="value1">&#36;11,567.00</li>
+                                    <li class="list1">Etherum</li>
+                                    <li class="value1">&#36;5,583.00</li>
+                                    <li class="list1">Monero</li>
+                                    <li class="value1">&#36;8,050.97</li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPONENT 3 -->
+
+
+                <div class="sec3">
+                    <div class="sec31">
+                        <div class="secc5">
+                            <p class="ele31">Portfolio 1<span class="icon2"><i class="fa-solid fa-suitcase"></i></span></p>
+                            <ul>
+                                <li class="list2">Day</li>
+                                <li class="value2"><span class="green">&#9653;</span>3.7%</li>
+                            </ul>     
+                        </div>                    
+                        <div class="chart2">
+                                <canvas id="myChart2"></canvas>
+                        </div>
+                         <div class="secc3">
+                                <ul>
+                                    <li class="list">Week</li>
+                                    <li class="value"><span class="red">&#9663;</span>7%</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">Year</li>
+                                    <li class="value"><span class="green">&#9653;</span>29%</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">All Time</li>
+                                    <li class="value"><span class="green">&#9653;</span>254%</li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="sec32">
+                        <div class="secc5">
+                            <p class="ele31">Portfolio 2<span class="icon2"><i class="fa-solid fa-suitcase"></i></span></p>
+                            <ul>
+                                <li class="list2">Day</li>
+                                <li class="value2"><span class="green">&#9653;</span>3.7%</li>
+                            </ul>     
+                        </div>                    
+                        <div class="chart2">
+                                <canvas id="myChart3"></canvas>
+                        </div>
+                         <div class="secc3">
+                                <ul>
+                                    <li class="list">Week</li>
+                                    <li class="value"><span class="red">&#9663;</span>7%</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">Year</li>
+                                    <li class="value"><span class="green">&#9653;</span>29%</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">All Time</li>
+                                    <li class="value"><span class="green">&#9653;</span>254%</li>
+                                </ul>
+                        </div>
+                    </div>
+                <div class="sec33">
+                    <div class="secc5">
+                            <p class="ele31">Portfolio 3<span class="icon2"><i class="fa-solid fa-suitcase"></i></span></p>
+                            <ul>
+                                <li class="list2">Day</li>
+                                <li class="value2"><span class="green">&#9653;</span>3.7%</li>
+                            </ul>     
+                        </div>                    
+                        <div class="chart2">
+                                <canvas id="myChart4"></canvas>
+                        </div>
+                         <div class="secc3">
+                                <ul>
+                                    <li class="list">Week</li>
+                                    <li class="value"><span class="red">&#9663;</span>7%</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">Year</li>
+                                    <li class="value"><span class="green">&#9653;</span>29%</li>
+                                </ul>
+                                <ul class="divider">
+                                    <li class="list">All Time</li>
+                                    <li class="value"><span class="green">&#9653;</span>254%</li>
+                                </ul>
+                            </div>
+                    </div>
+            </div>
+
+            <!-- COMPONENT 4 -->
+
+                <div class="sec4">
+                    <div class="sec41">
+                        <p class="ele41">Chart<span class="icon2"><i class="fa-solid fa-signal"></i></span></p>
+                        <div class="chart3">
+                            <canvas id="myChart5"></canvas>
+                        </div>
+                    </div>
+                    <div class="sec42">
+                        <div class="secc6">
+                            <p class="ele42">Transactions<span class="icon2"><i class="fas fa-exchange-alt"></i></span></p>
+                            <button class="btn3">See all</button>
+                        </div>
+                        <div class="secc7">
+                            <div class="sec401">
+                                <ul>
+                                    <li class="list3">Buy<span class="icon3"><i class="fa-solid fa-arrow-down"></i></span></li>
+                                    <li class="value3">&#36;250.00</li>
+                                    <li class="list3">Sell<span class="icon3"><i class="fa-solid fa-arrow-up"></i></span></li>
+                                    <li class="value3">&#36;250.00</li>
+                                    <li class="list3">Sell<span class="icon3"><i class="fa-solid fa-arrow-up"></i></span></li>
+                                    <li class="value3">&#36;250.00</li>
+                                </ul>
+                            </div>
+                            <div class="sec402">
+                                <ul>
+                                    <li class="list4">Apr 20,2020</li>  
+                                </ul>
+                                <ul >
+                                    <li class="list4">Apr 16,2020</li>   
+                                </ul>
+                                <ul >
+                                    <li class="list4">Apr 10,2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="profile-info">
+            <div class="sec5">
+                <img src="./images/cartoon.jpeg" alt="cartoon">
+                <ul>
+                    <li class="list11">Good Morning, Ivan!</li>
+                    <li class="list12">Settings</li>
+                </ul>
+            </div>
+            <div class="sec6">
+                <p class="ele51">&#8645; Recent activity</p>
+                <ul>
+                    <li class="list5">1,837 USD = 0.084 BTC<span class="icon4"><i class="fa-solid fa-arrow-up"></i></span></li>
+                    <li class="value5">1 BTC = 8,468 USD</li>
+                    <li class="list5">1,837 USD = 0.084 BTC<span class="icon4"><i class="fa-solid fa-arrow-up"></i></span></li>
+                    <li class="value5">1 BTC = 8,468 USD</li>
+                    <li class="list5">1,837 USD = 0.084 BTC<span class="icon4"><i class="fa-solid fa-arrow-up"></i></span></li>
+                    <li class="value5">1 BTC = 8,468 USD</li>
+                </ul>
+            </div>
+            <div class="sec7">
+                <p class="ele52">Exchange<span class="icon2"><i class="fa-solid fa-arrows-rotate"></i></span></p>
+                <button class="btn4">USD<span><i class="fa-solid fa-angle-down"></i></span></button>
+            </div>
+            <div class="sec8">
+                <p class="ele53">1,700.00 USD</p>
+                <span class="icon5"><i class="fa-solid fa-arrows-rotate"></i></span>
+                <p class="ele53">0,674931 BTC</p>
+            </div>
+            <div class="sec9">
+                <span class="icon6"><i class="fa-solid fa-envelope-open-text fa-4x"></i></span>
+                <span class="icon7"><i class="fa-solid fa-dollar-sign"></i></span>
+                <p class="ele54">Invite cusotmer and get &#36;10 for each</p>
+                <button class="btn5">Send Invitation</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
